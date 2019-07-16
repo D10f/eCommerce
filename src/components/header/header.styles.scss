@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+
+  .container-links {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    .nav-link {
+      padding: 0 2rem;
+    }
+  }
+}
