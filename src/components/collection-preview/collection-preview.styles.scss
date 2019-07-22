@@ -1,12 +1,12 @@
 .collection-preview {
-  margin: 0 1rem 1rem 1rem;
-  padding: 0 1rem;
+  margin: 0 2rem;
+
+  .title {
+    padding-bottom: 1rem;
+  }
 
   .preview {
     display: flex;
     justify-content: space-around;
-    margin: 0;
-    padding: 0;
-    align-items: center;
   }
 }

@@ -4,7 +4,7 @@
   align-items: center;
   height: 70px;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 2rem 1rem 2rem;
   box-sizing: border-box;
 
   .container-links {
@@ -13,7 +13,12 @@
     justify-content: flex-end;
 
     .nav-link {
-      padding: 0 2rem;
+      padding: 0 1rem;
     }
+  }
+
+  div.nav-link {
+    cursor: pointer;
+    color: #333;
   }
 }
