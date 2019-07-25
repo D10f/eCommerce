@@ -10,6 +10,7 @@ import { selectCurrentUser } from './redux/user/user.selectors'
 import Header from './components/header/header.component.jsx'
 import HomePage from './pages/homepage/homepage.component.jsx'
 import ShopPage from './pages/shop/shop.component.jsx'
+import Checkout from './pages/checkout/checkout.component.jsx'
 import UserAuthPage from './pages/userauth/userauth.component.jsx'
 
 class App extends React.Component {
@@ -53,6 +54,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route path="/checkout" component={Checkout} />
           <Route exact path="/signin" render={() => this.props.currentUser ? (<Redirect to="/" />) : (<UserAuthPage />)} />
         </Switch>
       </div>
