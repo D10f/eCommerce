@@ -1,5 +1,6 @@
 import React from 'react'
-import MenuDirectory from '../../components/menu-directory/menu-directory.component'
+
+import MenuDirectory from '../../components/menu-directory/menu-directory.component';
 
 import './homepage.styles.scss'
 
