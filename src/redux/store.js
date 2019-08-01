@@ -9,8 +9,11 @@ import logger from 'redux-logger'
 
 import rootReducer from './root-reducer'
 
-// redux expects an array for each middleware, see docs.
-const middlewares = [logger]
+const middlewares = []
+
+if(process.env.NODE_ENV === 'development'){
+  middlewares.push(logger)
+}
 
 // now there's only one middleware but we could add more in the future, which is why we use the spread operator
 export const store = createStore(rootReducer, applyMiddleware(...middlewares))
