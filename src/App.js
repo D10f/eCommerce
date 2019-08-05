@@ -19,7 +19,11 @@ class App extends React.Component {
 
   componentDidMount(){
 
-    const { setCurrentUser } = this.props
+    const { setCurrentUser, collectionsArray } = this.props
+
+    // we only run this once to upload all the shop data to firebase, note it requires some imports which are deleted
+    // addCollectionAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items })))
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if(userAuth){
         const userRef = await createUserProfileDocument(userAuth)

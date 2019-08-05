@@ -11,25 +11,30 @@ import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart-dropdown/cart-dropdown.component'
 
 import { ReactComponent as Logo } from '../../assets/crown.svg'
-import './header.styles.scss'
+import { HeaderContainer, LogoContainer, LinkContainer, NavLink, DivLink } from './header.styles'
+
+/*
+  Replacing stylesheet with StyledComponents
+  import './header.styles.scss'
+*/
 
 const Header = ({ currentUser, hidden }) => (
-  <header className="header">
-    <Link className="logo-container" to="/">
+  <HeaderContainer>
+    <LogoContainer to="/">
       <Logo className="logo" />
-    </Link>
-    <div className="container-links">
-      <Link className="nav-link" to="/shop">Shop</Link>
-      <Link className="nav-link" to="/contact">Contact</Link>
+    </LogoContainer>
+    <LinkContainer>
+      <NavLink to="/shop">Shop</NavLink>
+      <NavLink to="/contact">Contact</NavLink>
       {currentUser ?
-        <div className="nav-link" onClick={() => auth.signOut()}>Sign Out</div>
+        <DivLink onClick={() => auth.signOut()}>Sign Out</DivLink>
         :
-        <Link className="nav-link" to="/signin">Sign In</Link>
+        <NavLink to="/signin">Sign In</NavLink>
       }
       <CartIcon />
-    </div>
+    </LinkContainer>
     {hidden ? null : <CartDropdown />}
-  </header>
+  </HeaderContainer>
 )
 
 const mapStateToProps = createStructuredSelector({
